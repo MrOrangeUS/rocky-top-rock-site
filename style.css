@@ -33,11 +33,12 @@ body {
 /* Navigation bar styles */
 .navbar {
   background-color: var(--dark);
+    opacity: 0.5;
   padding: 0.5rem 0;
 }
 
 .navbar .logo-link {
-  display: inline-block;
+     display: inline-block;
 }
 
 .navbar .logo {
