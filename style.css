@@ -32,13 +32,17 @@ body {
 
 /* Navigation bar styles */
 .navbar {
-  background-color: var(--dark);
-    opacity: 0.5;
+  /* Semi‑transparent header so the hero image shows through.  Setting
+     opacity on the navbar applies to its children (logo included),
+     giving the entire header a unified 50% transparency. */
+  /* Use a semi‑transparent background color to keep the bar translucent
+     while allowing the logo and other contents to remain fully opaque. */
+  background-color: rgba(42, 42, 42, 0.5);
   padding: 0.5rem 0;
 }
 
 .navbar .logo-link {
-     display: inline-block;
+  display: inline-block;
 }
 
 .navbar .logo {
