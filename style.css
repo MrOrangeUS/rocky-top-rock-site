@@ -132,6 +132,18 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/service-landscape.jpg');
 }
 
+/* Driveways page hero
+   Use a custom background image for the driveways page while keeping the dark overlay. */
+.hero-driveway {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero-driveway.jpg');
+}
+
+/* Parking lots page hero
+   Use a custom background image for the parking lots page with the same overlay. */
+.hero-parking {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero-parking.jpg');
+}
+
 .hero h1 {
   font-size: 2.6rem;
   margin-bottom: 20px;
