@@ -1,0 +1,300 @@
+/* Base styles for Rocky Top Rock website */
+
+/* CSS Variables for easy theming */
+:root {
+  --primary: #EE6A24; /* warm landscaping orange */
+  --dark: #2A2A2A;    /* charcoal */
+  --gray: #6d6d6d;    /* medium gray for body text */
+  --light: #F9F9F9;   /* light background */
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+/* Utility container for page content */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: var(--dark);
+  padding: 0.5rem 0;
+}
+
+.navbar .logo-link {
+  display: inline-block;
+}
+
+.navbar .logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #d95d1f;
+}
+
+/* Link buttons (less prominent) */
+.btn-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  background: var(--dark);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+/* Trust strip */
+.trust-strip {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 0;
+  font-size: 0.9rem;
+}
+
+.trust-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.trust-strip li {
+  font-weight: 600;
+}
+
+/* Section headings */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+
+/* Services */
+.services {
+  background: var(--light);
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.service-item {
+  flex: 1 1 280px;
+  background: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-item h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.service-item p {
+  color: var(--gray);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* Who we serve */
+.who-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.who-item {
+  flex: 1 1 280px;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.who-item h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.who-item p {
+  color: var(--gray);
+}
+
+/* How it works */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.step {
+  flex: 1 1 250px;
+  text-align: center;
+  padding: 20px;
+}
+
+.step span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.step h4 {
+  color: var(--dark);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.step p {
+  color: var(--gray);
+}
+
+/* Testimonials */
+.testimonials {
+  background: var(--light);
+}
+
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  color: var(--gray);
+}
+
+/* Service area */
+.service-area {
+  text-align: center;
+}
+
+.service-area p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+/* Final CTA */
+.final-cta {
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.final-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .service-list, .who-list, .steps {
+    flex-direction: column;
+  }
+  .service-item, .who-item, .step {
+    flex: 1 1 100%;
+  }
+}
