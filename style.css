@@ -180,12 +180,11 @@ section h2 {
   justify-content: center;
 }
 
+/* Service item card */
 .service-item {
   flex: 1 1 280px;
   background: var(--white);
-
-  /* Add top padding equal to the header height so content does not hide behind the fixed nav bar */
-  padding-top: 90px;
+  /* Remove the large top padding since images now occupy the top */
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -230,6 +229,34 @@ section h2 {
 
 .who-item p {
   color: var(--gray);
+}
+
+/* --------------------------------------------------------------------------
+ * Images for service and project cards
+ *
+ * The images at the top of each card use the golden ratio (≈1.618:1) to
+ * achieve a pleasing balance between width and height. We ensure they fill
+ * the card width, crop excess using object-fit: cover, and round only the
+ * top corners to integrate smoothly with the card background.
+ */
+.service-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.618;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.who-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.618;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 12px;
 }
 
 /* How it works */
