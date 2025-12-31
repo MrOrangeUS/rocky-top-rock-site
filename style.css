@@ -125,6 +125,13 @@ body {
   text-align: center;
 }
 
+/* Landscape page hero
+   Use a different background image for the landscaping & property projects page while
+   retaining the same dark gradient overlay to keep text legible. */
+.hero-landscape {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/service-landscape.jpg');
+}
+
 .hero h1 {
   font-size: 2.6rem;
   margin-bottom: 20px;
