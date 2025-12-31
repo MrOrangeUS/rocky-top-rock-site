@@ -39,6 +39,12 @@ body {
      while allowing the logo and other contents to remain fully opaque. */
   background-color: rgba(42, 42, 42, 0.5);
   padding: 0.5rem 0;
+  /* Keep the nav bar fixed at the top so it floats over the hero image */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar .logo-link {
@@ -154,6 +160,9 @@ section h2 {
 .service-item {
   flex: 1 1 280px;
   background: var(--white);
+
+  /* Add top padding equal to the header height so content does not hide behind the fixed nav bar */
+  padding-top: 90px;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
