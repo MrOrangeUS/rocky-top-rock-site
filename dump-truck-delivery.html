@@ -15,16 +15,17 @@
     <div class="container">
       <a href="index.html" class="logo-link">
         <!-- Use the optimized logo to improve load time -->
-        <img src="assets/logo_small.png" alt="Rocky Top Rock logo" class="logo" />
+        <!-- Use the single horizontal logo for a clean header -->
+        <img src="assets/logo_header.png" alt="Rocky Top Rock logo" class="logo" />
       </a>
     </div>
   </nav>
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
-      <h1>Dump Truck Delivery</h1>
-      <p>Professional delivery for projects of any size — from driveway loads to large commercial jobs.</p>
-      <a href="#quote" class="btn">Schedule Your Delivery</a>
+      <h1>Fast Dump Truck Delivery When You Need It</h1>
+      <p>From driveway loads to large commercial projects — our experienced drivers deliver your materials on time, every time.</p>
+      <a href="#quote" class="btn">Get a Free Quote</a>
     </div>
   </header>
 
@@ -78,6 +79,21 @@
           <p>Your driver arrives as scheduled, unloads safely and leaves your site ready for work.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Lead Capture / Quote Form -->
+  <section id="quote" class="lead-capture">
+    <div class="container">
+      <h2>Schedule Your Dump Truck Delivery</h2>
+      <p>Provide us with your project details and we’ll send you a quote and delivery time.</p>
+      <form class="quote-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="details" placeholder="Material type, quantity, delivery location" required></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
     </div>
   </section>
 

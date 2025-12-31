@@ -74,10 +74,20 @@ body {
 }
 
 /* Hero section */
+
+/* Hero section
+   Use a dark overlay on top of a background image to ensure the
+   headline and call‑to‑action remain legible. The image itself
+   reinforces the rock and gravel delivery service while the overlay
+   provides contrast. */
 .hero {
-  background: var(--dark);
+  /* Layer a semi‑transparent gradient over the hero image */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--white);
-  padding: 80px 0;
+  padding: 120px 0;
   text-align: center;
 }
 
@@ -282,6 +292,63 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+}
+
+/* Lead capture section styles */
+.lead-capture {
+  background: var(--light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.lead-capture h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.lead-capture p {
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+/* Form container */
+.quote-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.quote-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.quote-form button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quote-form button:hover {
+  background: #d95d1f;
 }
 
 @media (max-width: 768px) {
