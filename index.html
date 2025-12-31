@@ -3,138 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- SEO description for homepage -->
-  <meta name="description" content="Rocky Top Rock supplies rock, gravel and dump truck delivery services for homeowners, landscapers and contractors across the region. Get a quote today for quality materials and reliable service." />
-  <title>Rocky Top Rock – Rock, Gravel & Dump Truck Delivery</title>
-  <!-- Google Fonts -->
+  <meta name="description" content="Rocky Top Rock supplies rock, gravel and dump truck delivery services for homeowners, landscapers and contractors across the region." />
+  <title>Rocky Top Rock – React App</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation Bar with Logo -->
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react-router-dom@6/umd/react-router-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+const pages = {
+  '/rock-aggregate': `
+<!-- Navigation Bar with Logo -->
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="logo-link">
+      <a href="#/" class="logo-link">
         <!-- Use the optimized logo to improve load time -->
         <!-- Use the single horizontal logo for a clean header -->
         <img src="assets/logo_header_noborder.png" alt="Rocky Top Rock logo" class="logo" />
       </a>
-      <!-- Header call‑to‑action button that anchors to the quote form -->
+      <!-- Header call‑to‑action button that anchors to the quote form on this page -->
       <a href="#quote" class="cta-header">Get a Free Quote</a>
     </div>
   </nav>
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
-      <h1>Get Quality Rock &amp; Gravel Delivered On Time</h1>
-      <p>Local supplier with fair pricing, fast scheduling and reliable delivery. Serving homeowners, landscapers and contractors.</p>
-      <a href="#quote" class="btn">Get a Free Quote</a>
+      <h1>Rock &amp; Aggregate Supply</h1>
+      <p>Quality materials for every project — from driveways and construction to landscaping and gardens.</p>
+      <a href="#quote" class="btn">Request Pricing</a>
     </div>
   </header>
 
-  <!-- Trust Strip -->
-  <div class="trust-strip">
+  <!-- Intro Section -->
+  <section>
     <div class="container">
-      <ul>
-        <li>Local Supplier</li>
-        <li>Fast Delivery</li>
-        <li>Residential &amp; Commercial</li>
-        <li>Fair Pricing</li>
-        <li>Reliable Scheduling</li>
-      </ul>
+      <h2>Materials You Can Count On</h2>
+      <p>Whether you need gravel for a driveway, crushed stone for construction, fill material or decorative rock for landscaping, we provide the materials you need in the quantities you require. Our rock and aggregate supply ensures your project starts with the right foundation.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- Services Section -->
+  <!-- Benefits Section -->
   <section class="services">
     <div class="container">
-      <h2>Our Services</h2>
+      <h2>Why Choose Our Rock Supply?</h2>
       <div class="service-list">
-        <!-- Rock & Aggregate Supply -->
         <div class="service-item">
-          <img src="assets/service-rock.jpg" alt="Rock &amp; Aggregate Supply" class="service-image" />
-          <h3>Rock &amp; Aggregate Supply</h3>
-          <p>Gravel, crushed stone, fill material and decorative rock — delivered in the quantities you need.</p>
-          <a href="rock-aggregate.html" class="btn-link">Request Pricing →</a>
+          <h3>Wide Selection</h3>
+          <p>Gravel, crushed stone, river rock, fill material and decorative rock — select the right material for your project.</p>
         </div>
-        <!-- Dump Truck Delivery -->
         <div class="service-item">
-          <img src="assets/service-dump.jpg" alt="Dump Truck Delivery" class="service-image" />
-          <h3>Dump Truck Delivery</h3>
-          <p>Prompt and professional delivery for driveways, yard projects, construction and commercial properties.</p>
-          <a href="dump-truck-delivery.html" class="btn-link">Request Pricing →</a>
+          <h3>Flexible Quantities</h3>
+          <p>From small pickup loads to full truckloads, order exactly what you need for your job.</p>
         </div>
-        <!-- Landscaping & Property Projects -->
         <div class="service-item">
-          <img src="assets/service-landscape.jpg" alt="Landscaping &amp; Property Projects" class="service-image" />
-          <h3>Landscaping &amp; Property Projects</h3>
-          <p>Spreading material, base prep and project support for residential and commercial landscaping.</p>
-          <a href="landscaping.html" class="btn-link">Request Pricing →</a>
-        </div>
-        <!-- Driveway Materials & Installation -->
-        <div class="service-item">
-          <img src="assets/hero-driveway.jpg" alt="Driveway installation and materials" class="service-image" />
-          <h3>Driveway Installation</h3>
-          <p>Materials, grading and installation for durable residential and commercial driveways.</p>
-          <a href="driveways.html" class="btn-link">Request Pricing →</a>
-        </div>
-        <!-- Parking Lot Construction -->
-        <div class="service-item">
-          <img src="assets/hero-parking.jpg" alt="Parking lot construction and materials" class="service-image" />
-          <h3>Parking Lots</h3>
-          <p>Rock, base material and grading services to build reliable parking lots for homes and businesses.</p>
-          <a href="parking-lots.html" class="btn-link">Request Pricing →</a>
+          <h3>Delivered to You</h3>
+          <p>Save time and effort with our dump truck delivery to your home, job site or business.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Who We Serve Section -->
-  <section class="who-we-serve">
+  <!-- Additional Information for SEO and Visitors -->
+  <section>
     <div class="container">
-      <h2>Built for Your Project</h2>
-      <div class="who-list">
-        <div class="who-item">
-          <!-- Image illustrating homeowners projects -->
-          <img src="assets/project-homeowners.jpg" alt="Homeowners" class="who-image" />
-          <h3>Homeowners</h3>
-          <p>From driveways and drainage to garden beds — we help you get the job done.</p>
-        </div>
-        <div class="who-item">
-          <!-- Image illustrating landscapers projects -->
-          <img src="assets/project-landscapers.jpg" alt="Landscapers" class="who-image" />
-          <h3>Landscapers</h3>
-          <p>Bulk material supply with reliable scheduling and repeat delivery.</p>
-        </div>
-        <div class="who-item">
-          <!-- Image illustrating contractors & commercial projects -->
-          <img src="assets/project-contractors.jpg" alt="Contractors &amp; Commercial" class="who-image" />
-          <h3>Contractors &amp; Commercial</h3>
-          <p>Large loads, job‑site delivery and consistent supply for big projects.</p>
-        </div>
-      </div>
+      <h2>Versatile Applications &amp; On‑Site Advice</h2>
+      <p>Our aggregates are more than just filler—choose from decorative river rock to enhance garden borders, coarse base material to stabilize driveways and walkways, or granular fill that compacts under heavy equipment for stable foundations. We also carry specialty stones for drainage and erosion control, perfect for French drains, retaining wall backfill and drainage swales.</p>
+      <p>Not sure what product is right for your project? Our local team is ready to help. We’ll ask about your soil conditions, design goals and expected traffic to recommend the ideal rock size, shape and composition. Whether you’re a contractor on a job site or a homeowner starting a DIY project, we make sure you get the right material delivered at the right time.</p>
     </div>
   </section>
 
-  <!-- How It Works Section -->
+  <section>
+    <div class="container">
+      <h2>Custom Orders &amp; Convenient Delivery</h2>
+      <p>Every project is unique, so we offer custom blends and special‑order aggregates for projects with specific requirements. Need a washed stone or a particular color to complement your landscape design? We can source and deliver it. All orders are available in bulk or by cubic yard, and we offer prompt dump‑truck delivery across Upper Grand Lagoon and surrounding communities.</p>
+      <p>By partnering with Rocky Top Rock, you gain access to a reliable rock supplier committed to fair pricing, quality materials and outstanding customer service. From initial consultation to final delivery, we support you every step of the way.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
   <section class="how-it-works">
     <div class="container">
-      <h2>Simple. Fast. Reliable.</h2>
+      <h2>How It Works</h2>
       <div class="steps">
         <div class="step">
           <span>1</span>
-          <h4>Request a Quote</h4>
-          <p>Tell us about your project and the materials you need.</p>
+          <h4>Tell Us What You Need</h4>
+          <p>Let us know the type of material and quantity for your project.</p>
         </div>
         <div class="step">
           <span>2</span>
-          <h4>Confirm &amp; Schedule</h4>
-          <p>We confirm material quantities and schedule your delivery.</p>
+          <h4>Schedule Your Delivery</h4>
+          <p>We’ll arrange a convenient delivery time and confirm pricing.</p>
         </div>
         <div class="step">
           <span>3</span>
           <h4>We Deliver On Time</h4>
-          <p>Your materials arrive as promised so your project stays on track.</p>
+          <p>Your materials arrive as promised, ready for your crew or DIY project.</p>
         </div>
       </div>
     </div>
@@ -143,46 +111,25 @@
   <!-- Lead Capture / Quote Form -->
   <section id="quote" class="lead-capture">
     <div class="container">
-      <h2>Get Your Free Quote</h2>
-      <p>Tell us about your project and we’ll prepare a custom quote for your rock, gravel or dump‑truck delivery needs.</p>
+      <h2>Request a Quote for Rock Supply</h2>
+      <p>Let us know what material and quantity you need and we’ll provide pricing and scheduling details.</p>
       <form class="quote-form" action="#" method="post">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="tel" name="phone" placeholder="Phone Number" required />
-        <textarea name="details" placeholder="Project details (material type, quantity, location)" required></textarea>
+        <textarea name="details" placeholder="Material type, quantity, delivery location" required></textarea>
         <button type="submit">Request Quote</button>
       </form>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="container">
-      <h2>Trusted by Local Customers</h2>
-      <div class="testimonial-list">
-        <div class="testimonial">“Great pricing and fast delivery — everything arrived exactly when promised.”</div>
-        <div class="testimonial">“Their gravel made our driveway project simple. Excellent service!”</div>
-        <div class="testimonial">“Reliable and easy to work with, from ordering to drop off.”</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Area Section -->
-  <section class="service-area">
-    <div class="container">
-      <h2>Proudly Serving Our Local Area</h2>
-      <p>We supply and deliver rock, gravel and landscaping materials across the region. If you’re unsure whether we deliver to your location, just ask.</p>
-      <a href="#quote" class="btn">Call to Confirm</a>
-    </div>
-  </section>
-
-  <!-- Final CTA Section -->
+  <!-- CTA -->
   <section class="final-cta">
     <div class="container">
-      <h3>Ready to Get Rock Delivered?</h3>
+      <h3>Ready to Order Your Rock?</h3>
       <div class="cta-buttons">
         <a href="#quote" class="btn">Request a Quote</a>
-        <a href="tel:+15555555555" class="btn">Call Now</a>
+        <a href="#/" class="btn-link" style="color:white;">Back to Home</a>
       </div>
     </div>
   </section>
@@ -191,5 +138,733 @@
   <footer>
     Rocky Top Rock © 2025 &nbsp;|&nbsp; All rights reserved.
   </footer>
+  `,
+  '/dump-truck-delivery': `
+<!-- Navigation Bar with Logo -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#/" class="logo-link">
+        <!-- Use the optimized logo to improve load time -->
+        <!-- Use the single horizontal logo for a clean header -->
+        <img src="assets/logo_header_noborder.png" alt="Rocky Top Rock logo" class="logo" />
+      </a>
+      <!-- Header call‑to‑action button that anchors to the quote form on this page -->
+      <a href="#quote" class="cta-header">Get a Free Quote</a>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Fast Dump Truck Delivery When You Need It</h1>
+      <p>From driveway loads to large commercial projects — our experienced drivers deliver your materials on time, every time.</p>
+      <a href="#quote" class="btn">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <section>
+    <div class="container">
+      <h2>Dependable Delivery Service</h2>
+      <p>Our experienced drivers deliver rock, gravel and aggregates to your home, job site or project location. We handle residential and commercial deliveries across the region, getting your materials to you safely and on time.</p>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="services">
+    <div class="container">
+      <h2>Why Our Dump Truck Service?</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Projects of Any Size</h3>
+          <p>From small driveway loads to large-scale commercial projects, our fleet can handle it.</p>
+        </div>
+        <div class="service-item">
+          <h3>Prompt &amp; Reliable</h3>
+          <p>We pride ourselves on flexible scheduling and on-time deliveries.</p>
+        </div>
+        <div class="service-item">
+          <h3>Safe Unloading</h3>
+          <p>Our drivers respect your property and unload safely — with drop &amp; spread options available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Content: Flexible Equipment & Safe Unloading -->
+  <section>
+    <div class="container">
+      <h2>Flexible Equipment &amp; Safe Unloading</h2>
+      <p>When you book a dump truck delivery with Rocky Top Rock, you get more than a truck and driver.  You tap into a versatile fleet of haulers designed to carry everything from fine sand and decorative gravel to coarse rip‑rap and bulky fill material.  Each truck is maintained to the highest standards and configured for your specific job – whether it’s a quick driveway top‑off or a multi‑load commercial excavation.  Our operators evaluate access points, adjust bed height and chute position, and deliver exactly where you need it, saving you time and manual labor.</p>
+      <p>Safety is at the heart of our operations.  Our team members undergo regular training on site etiquette and safe unloading practices, so your yard or job site stays tidy and undamaged.  We offer drop‑and‑go service, live spread (controlled release while the truck moves forward), and placement in tight corners, all while protecting driveways, curbs and landscaping.  Clear communication before, during and after delivery means there are no surprises – just the material you ordered, delivered smoothly and efficiently.</p>
+    </div>
+  </section>
+
+  <!-- Additional Content: Serving Upper Grand Lagoon and Beyond -->
+  <section>
+    <div class="container">
+      <h2>Serving Upper Grand Lagoon and Beyond</h2>
+      <p>Based in the heart of Upper Grand Lagoon, we proudly serve homeowners, contractors and business owners throughout Bay County and the surrounding Florida Panhandle.  Our local roots mean we understand the unique soils and climates of the area and can recommend the right rock or aggregate for driveways, drainage swales, patios or construction bases.  We regularly deliver to Panama City Beach, Lynn Haven, Callaway and other nearby communities, so you can trust that we know the quickest routes and the permits required for larger loads.</p>
+      <p>Scheduling is easy and flexible.  We work around your project timeline – from early morning drop‑offs before crews arrive to weekend deliveries when you have the time to spread material yourself.  And because we’re a local, family‑run business, you get responsive customer service and fair pricing without hidden fees or surcharges.  If you’re planning a new driveway, need fill for a seawall, or want to stockpile material for upcoming jobs, our dump truck delivery service makes it simple to get the material you need, when you need it.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h4>Request Your Delivery</h4>
+          <p>Choose your material and let us know when and where you need it.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h4>Confirm the Details</h4>
+          <p>We’ll confirm the date, time, quantity and price with you.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h4>We Deliver &amp; Unload</h4>
+          <p>Your driver arrives as scheduled, unloads safely and leaves your site ready for work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Capture / Quote Form -->
+  <section id="quote" class="lead-capture">
+    <div class="container">
+      <h2>Schedule Your Dump Truck Delivery</h2>
+      <p>Provide us with your project details and we’ll send you a quote and delivery time.</p>
+      <form class="quote-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="details" placeholder="Material type, quantity, delivery location" required></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h3>Schedule Your Delivery</h3>
+      <div class="cta-buttons">
+        <a href="#quote" class="btn">Get a Quote</a>
+        <a href="#/" class="btn-link" style="color:white;">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Rocky Top Rock © 2025 &nbsp;|&nbsp; All rights reserved.
+  </footer>
+  `,
+  '/landscaping': `
+<!-- Navigation Bar with Logo -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#/" class="logo-link">
+        <!-- Use the optimized logo to improve load time -->
+        <!-- Use the single horizontal logo for a clean header -->
+        <img src="assets/logo_header_noborder.png" alt="Rocky Top Rock logo" class="logo" />
+      </a>
+      <!-- Header call‑to‑action button that anchors to the quote form on this page -->
+      <a href="#quote" class="cta-header">Get a Free Quote</a>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <!-- Use a unique class for the landscaping page hero so we can set a distinct background image in CSS. -->
+  <header class="hero hero-landscape">
+    <div class="container">
+      <h1>Transform Your Landscape with Quality Materials</h1>
+      <p>We deliver and prepare rock, gravel &amp; base material to bring your outdoor vision to life.</p>
+      <a href="#quote" class="btn">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <section>
+    <div class="container">
+      <h2>Materials &amp; Support for Every Outdoor Project</h2>
+      <p>From creating beautiful garden beds to prepping for patios and retaining walls, we support homeowners, landscapers and property managers with the materials and services they need. Let us help you bring your landscape vision to life.</p>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="services">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="service-list">
+        <!-- Each service card includes an image and alt text to help visitors and search engines understand the content. The images are sized in CSS to maintain the golden ratio. -->
+        <div class="service-item">
+          <img src="assets/service-landscape.jpg" alt="Spread and base prep services including garden bed and patio preparation" />
+          <h3>Spread &amp; Base Prep</h3>
+          <p>We can spread material and prepare the base for driveways, patios, paths and garden beds.</p>
+        </div>
+        <div class="service-item">
+          <img src="assets/service-rock.jpg" alt="Drainage and driveway materials such as gravel, rock and stone" />
+          <h3>Drainage &amp; Driveway Materials</h3>
+          <p>Materials for drainage solutions, driveways, patios, retaining walls and more.</p>
+        </div>
+        <div class="service-item">
+          <img src="assets/project-contractors.jpg" alt="Residential and commercial landscaping projects including patios and commercial properties" />
+          <h3>Residential &amp; Commercial</h3>
+          <p>Whether your project is at home or on a commercial property, our team has you covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section>
+    <div class="container">
+      <h2>Why Rocky Top Rock?</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Expert Advice</h3>
+          <p>We help you choose the right materials and quantities to achieve your landscape goals.</p>
+        </div>
+        <div class="service-item">
+          <h3>Reliable Scheduling</h3>
+          <p>We work around your timeline to ensure your project stays on track.</p>
+        </div>
+        <div class="service-item">
+          <h3>Proven Track Record</h3>
+          <p>Our customers trust us for quality materials and dependable service every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Content: Creative Landscape Solutions -->
+  <section>
+    <div class="container">
+      <h2>Creative Landscape Solutions</h2>
+      <p>A gorgeous outdoor space goes beyond rocks and mulch – it’s about creating a cohesive design that invites you to relax, entertain and enjoy your surroundings.  Whether you’re outlining a meandering pathway with river rock, edging flower beds with decorative gravel, or building a raised patio with compacted base material, we provide the supplies and expertise to bring those ideas to life.  French drains and dry creek beds help manage water run‑off while adding visual interest; flagstones, pavers and stepping stones create stylish walkways that are safe and durable; and we can even deliver pea gravel or crushed limestone for pet runs and play areas.</p>
+      <p>Our team collaborates with homeowners, landscapers and property managers to choose the right aggregate sizes and colors for each application.  Want to build a fire pit area that can withstand high heat?  We’ll recommend a non‑combustible crushed stone.  Designing a retaining wall or terraced garden?  Our materials provide the stability and drainage needed to prevent shifting soil.  From low‑maintenance xeriscapes to lush tropical gardens, Rocky Top Rock supplies the base and decorative materials to make your landscape design unique.  Just let us know your vision, and we’ll deliver the products and guidance you need to create an outdoor oasis.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h4>Request Materials &amp; Services</h4>
+          <p>Tell us about your project and the materials or help you need.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h4>We Help You Choose</h4>
+          <p>Our team will recommend the best products and services for your project.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h4>Deliver, Spread &amp; Prep</h4>
+          <p>We deliver your materials and can spread and prepare them for your project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Capture / Quote Form -->
+  <section id="quote" class="lead-capture">
+    <div class="container">
+      <h2>Get a Quote for Your Project</h2>
+      <p>Share your project goals and we’ll provide a custom material and service quote.</p>
+      <form class="quote-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="details" placeholder="Describe your landscaping project and desired materials" required></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h3>Start Your Landscaping Project</h3>
+      <div class="cta-buttons">
+        <a href="#quote" class="btn">Get a Quote</a>
+        <a href="#/" class="btn-link" style="color:white;">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Rocky Top Rock © 2025 &nbsp;|&nbsp; All rights reserved.
+  </footer>
+  `,
+  '/driveways': `
+<!-- Navigation Bar with Logo -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#/" class="logo-link">
+        <img src="assets/logo_header_noborder.png" alt="Rocky Top Rock logo" class="logo" />
+      </a>
+      <a href="#quote" class="cta-header">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Use a unique class for the driveways page hero so we can set a distinct background image in CSS. -->
+  <header class="hero hero-driveway">
+    <div class="container">
+      <h1>Build a Durable Driveway with Quality Materials</h1>
+      <p>We supply, deliver and install gravel, crushed stone &amp; base material to create strong, long‑lasting driveways.</p>
+      <a href="#quote" class="btn">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <section>
+    <div class="container">
+      <h2>Materials &amp; Services for Every Driveway Project</h2>
+      <p>A durable driveway starts with high‑quality materials and proper preparation. From gravel supply to grading and compaction, we support homeowners, builders and property managers with the products and expertise needed for reliable driveways.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="assets/service-dump.jpg" alt="Driveway material supply including gravel, crushed stone and rock" />
+          <h3>Driveway Material Supply</h3>
+          <p>We deliver bulk gravel, crushed stone and base material in the quantities you need for a solid driveway foundation.</p>
+        </div>
+        <div class="service-item">
+          <img src="assets/hero-driveway.jpg" alt="Driveway base preparation and grading services" />
+          <h3>Base Preparation &amp; Grading</h3>
+          <p>Proper grading and compaction are essential for a long‑lasting driveway. We prepare the base to ensure stability and drainage.</p>
+        </div>
+        <div class="service-item">
+          <img src="assets/project-contractors.jpg" alt="Residential and commercial driveway installation" />
+          <h3>Residential &amp; Commercial</h3>
+          <p>Whether you’re installing a driveway at home or for a commercial property, our team delivers professional installation and finishing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section>
+    <div class="container">
+      <h2>Why Rocky Top Rock?</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Trusted Expertise</h3>
+          <p>With years of experience supplying and installing driveways, we know how to choose the right materials and methods for lasting results.</p>
+        </div>
+        <div class="service-item">
+          <h3>On‑Time Scheduling</h3>
+          <p>We work around your timeline to deliver materials and complete installation when you need it.</p>
+        </div>
+        <div class="service-item">
+          <h3>Built to Last</h3>
+          <p>Our driveways stand up to heavy use and weather because we use quality rock and proven installation techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Content: Designing Durable Driveways -->
+  <section>
+    <div class="container">
+      <h2>Designing Durable Driveways</h2>
+      <p>A well‑constructed driveway begins long before the first load of gravel arrives.  We’ll help you plan the layout, taking into account your property’s slope, drainage requirements and the vehicles that will use the surface.  A properly engineered sub‑base of compacted rock or crushed concrete sets the stage for a driveway that resists rutting and potholes for years.  For steep driveways, we may recommend interlocking or crushed stone that locks together for better traction.  Our team can also advise on driveway width, turning radius and tie‑ins to roads or garages to ensure safe access for vehicles of all sizes.</p>
+      <p>One size doesn’t fit all; that’s why we offer multiple aggregate options to match your budget and aesthetic.  Clean chip rock and decomposed granite provide a refined, modern look; river rock and pea gravel add natural charm; and crushed limestone offers excellent compaction for heavy‑duty applications.  We also consider local climate and soil composition, recommending materials that shed water quickly and prevent erosion in rainy seasons.  With Rocky Top Rock, you get a driveway designed for performance and curb appeal.</p>
+    </div>
+  </section>
+
+  <!-- Additional Content: Enhancements & Maintenance -->
+  <section>
+    <div class="container">
+      <h2>Enhancements &amp; Maintenance</h2>
+      <p>Your driveway is more than a utilitarian surface – it frames your home or business and can add to its value.  Consider finishing touches such as decorative edging, boulder borders or brick pavers along the sides to define the space and keep gravel contained.  Installing weed barrier fabric beneath the base layer helps suppress unwanted growth, while a top dressing of fresh gravel every few years refreshes the look and maintains proper drainage.  We can also incorporate permeable pavers or poured concrete accents for a custom design that stands out from standard gravel driveways.</p>
+      <p>To keep your driveway in peak condition, regular maintenance is key.  We recommend periodic raking or grading to level out minor ruts, adding material as needed to maintain thickness, and cleaning culverts or ditches to ensure water can flow away freely.  Because we know every property is different, we’re happy to set up a service schedule for regrading and gravel replenishment.  With our comprehensive supply, installation and maintenance services, your driveway will remain safe, functional and attractive for years to come.</p>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h4>Request Your Driveway</h4>
+          <p>Tell us about your driveway goals and the materials you need.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h4>We Plan &amp; Schedule</h4>
+          <p>Our team will recommend the right products and schedule delivery and installation.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h4>Deliver &amp; Install</h4>
+          <p>We deliver your materials, prepare the base and install your driveway so it’s ready for use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section id="quote" class="lead-capture">
+    <div class="container">
+      <h2>Get a Quote for Your Driveway</h2>
+      <p>Share your project goals and we’ll provide a custom material and installation quote.</p>
+      <form class="quote-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="details" placeholder="Describe your driveway project and desired materials" required></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h3>Start Your Driveway Project</h3>
+      <div class="cta-buttons">
+        <a href="#quote" class="btn">Get a Quote</a>
+        <a href="#/" class="btn-link" style="color:white;">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Rocky Top Rock © 2025  |  All rights reserved.
+  </footer>
+  `,
+  '/parking-lots': `
+<!-- Navigation Bar with Logo -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#/" class="logo-link">
+        <img src="assets/logo_header_noborder.png" alt="Rocky Top Rock logo" class="logo" />
+      </a>
+      <a href="#quote" class="cta-header">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Use a unique class for the parking lots page hero so we can set a distinct background image in CSS. -->
+  <header class="hero hero-parking">
+    <div class="container">
+      <h1>Construct Reliable Parking Lots with Quality Rock &amp; Base</h1>
+      <p>We supply rock, gravel and base material, grade surfaces and compact them to build durable parking lots for businesses and residences.</p>
+      <a href="#quote" class="btn">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <section>
+    <div class="container">
+      <h2>Materials &amp; Services for Every Parking Lot Project</h2>
+      <p>Our parking lot services cover everything from bulk material supply to grading and compaction. We ensure proper drainage and stability so your lot can withstand heavy traffic and weather.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="assets/service-dump.jpg" alt="Bulk rock and gravel supply for parking lots" />
+          <h3>Bulk Material Supply</h3>
+          <p>We deliver high‑quality rock, gravel and base material in the quantities you need for large parking lot projects.</p>
+        </div>
+        <div class="service-item">
+          <img src="assets/hero-parking.jpg" alt="Base preparation and grading for parking lots" />
+          <h3>Base Preparation &amp; Grading</h3>
+          <p>We grade and compact your parking lot base to ensure proper drainage and a smooth, long‑lasting surface.</p>
+        </div>
+        <div class="service-item">
+          <img src="assets/project-contractors.jpg" alt="Commercial and residential parking lot construction" />
+          <h3>Commercial &amp; Residential</h3>
+          <p>From small residential lots to large commercial parking areas, our team handles projects of any size with professionalism.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section>
+    <div class="container">
+      <h2>Why Rocky Top Rock?</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Industrial‑Grade Quality</h3>
+          <p>We use durable rock and proven base materials engineered for heavy vehicle loads and long‑term performance.</p>
+        </div>
+        <div class="service-item">
+          <h3>Efficient Scheduling</h3>
+          <p>We coordinate materials and equipment to minimise downtime and keep your project on schedule.</p>
+        </div>
+        <div class="service-item">
+          <h3>Durable Performance</h3>
+          <p>Our parking lots are built to handle constant use and Florida weather, with proper compaction and drainage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Content: Engineered for Heavy Loads -->
+  <section>
+    <div class="container">
+      <h2>Engineered for Heavy Loads</h2>
+      <p>Parking lots endure daily punishment from passenger cars, delivery trucks and heavy construction vehicles.  To withstand that constant stress, the foundation needs to be engineered from the ground up.  Our process starts with excavating to the proper depth and installing a compacted sub‑base using crushed rock or recycled concrete.  Over that, we add a graded layer of aggregate base that distributes weight evenly and provides the perfect platform for asphalt, concrete or gravel surfacing.  The result is a stable parking lot that stays level and drains water efficiently, reducing potholes and maintenance costs over the long term.</p>
+      <p>We work closely with property owners, architects and civil engineers to choose the right materials and thicknesses for each application.  In high‑traffic zones or areas subject to heavy truck loads, we may recommend thicker base layers or the use of fines that interlock for additional strength.  Our expertise in materials means we can tailor the mix – using limestone for superior compaction or granite for added durability – while still offering competitive pricing.  Every lot we build is designed to handle its intended use and keep your customers and employees safe.</p>
+    </div>
+  </section>
+
+  <!-- Additional Content: Full‑Service Lot Preparation -->
+  <section>
+    <div class="container">
+      <h2>Full‑Service Lot Preparation</h2>
+      <p>Constructing or renovating a parking lot involves more than just dumping rock and grading it flat.  We provide comprehensive lot preparation services that include clearing and hauling away old surfaces, shaping the subgrade to ensure proper drainage, compacting soil to prevent settling, and installing geotextile fabric where necessary to stabilize soft soils.  Once the site is ready, we deliver and spread your chosen base material, then compact it in layers to achieve the specified density.  We can also coordinate with asphalt or concrete crews to ensure a seamless transition from base to finished surface.</p>
+      <p>If your lot requires unique features – such as lined spaces, accessible parking, heavy equipment pads, or integrated landscaping islands – we’ll plan and build those elements into the design.  We also offer maintenance services such as grading, pothole repair and top dressing to extend the life of gravel lots.  Our goal is to be your partner throughout the lifecycle of your parking area, from initial construction through ongoing upkeep.  With Rocky Top Rock, you get a turnkey solution that ensures your parking lot is safe, compliant and ready to welcome visitors.</p>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h4>Request Your Lot</h4>
+          <p>Tell us about your parking lot project and the materials you need.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h4>We Plan &amp; Schedule</h4>
+          <p>Our team will recommend the right products and schedule delivery and grading.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h4>Deliver &amp; Prepare</h4>
+          <p>We deliver your materials, grade the site and compact the base to finish your parking lot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section id="quote" class="lead-capture">
+    <div class="container">
+      <h2>Get a Quote for Your Parking Lot</h2>
+      <p>Share your project goals and we’ll provide a custom material and installation quote.</p>
+      <form class="quote-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="details" placeholder="Describe your parking lot project and desired materials" required></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h3>Start Your Parking Lot Project</h3>
+      <div class="cta-buttons">
+        <a href="#quote" class="btn">Get a Quote</a>
+        <a href="#/" class="btn-link" style="color:white;">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Rocky Top Rock © 2025  |  All rights reserved.
+  </footer>
+  `,
+  '/': `
+<nav class="navbar">
+  <div class="container">
+    <a href="#/" class="logo-link">
+      <img src="assets/logo_header_noborder.png" alt="Rocky Top Rock logo" class="logo" />
+    </a>
+    <a href="#quote" class="cta-header">Get a Free Quote</a>
+  </div>
+</nav>
+<header class="hero">
+  <div class="container">
+    <h1>Get Quality Rock &amp; Gravel Delivered On Time</h1>
+    <p>Local supplier with fair pricing, fast scheduling and reliable delivery. Serving homeowners, landscapers and contractors.</p>
+    <a href="#quote" class="btn">Get a Free Quote</a>
+  </div>
+</header>
+<div class="trust-strip">
+  <div class="container">
+    <ul>
+      <li>Local Supplier</li>
+      <li>Fast Delivery</li>
+      <li>Residential &amp; Commercial</li>
+      <li>Fair Pricing</li>
+      <li>Reliable Scheduling</li>
+    </ul>
+  </div>
+</div>
+<section class="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <img src="assets/service-rock.jpg" alt="Rock &amp; Aggregate Supply" class="service-image" />
+        <h3>Rock &amp; Aggregate Supply</h3>
+        <p>Gravel, crushed stone, fill material and decorative rock — delivered in the quantities you need.</p>
+        <a href="#/rock-aggregate" class="btn-link">Request Pricing →</a>
+      </div>
+      <div class="service-item">
+        <img src="assets/service-dump.jpg" alt="Dump Truck Delivery" class="service-image" />
+        <h3>Dump Truck Delivery</h3>
+        <p>Prompt and professional delivery for driveways, yard projects, construction and commercial properties.</p>
+        <a href="#/dump-truck-delivery" class="btn-link">Request Pricing →</a>
+      </div>
+      <div class="service-item">
+        <img src="assets/service-landscape.jpg" alt="Landscaping &amp; Property Projects" class="service-image" />
+        <h3>Landscaping &amp; Property Projects</h3>
+        <p>Spreading material, base prep and project support for residential and commercial landscaping.</p>
+        <a href="#/landscaping" class="btn-link">Request Pricing →</a>
+      </div>
+      <div class="service-item">
+        <img src="assets/hero-driveway.jpg" alt="Driveway installation and materials" class="service-image" />
+        <h3>Driveway Installation</h3>
+        <p>Materials, grading and installation for durable residential and commercial driveways.</p>
+        <a href="#/driveways" class="btn-link">Request Pricing →</a>
+      </div>
+      <div class="service-item">
+        <img src="assets/hero-parking.jpg" alt="Parking lot construction and materials" class="service-image" />
+        <h3>Parking Lots</h3>
+        <p>Rock, base material and grading services to build reliable parking lots for homes and businesses.</p>
+        <a href="#/parking-lots" class="btn-link">Request Pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="who-we-serve">
+  <div class="container">
+    <h2>Built for Your Project</h2>
+    <div class="who-list">
+      <div class="who-item">
+        <img src="assets/project-homeowners.jpg" alt="Homeowners" class="who-image" />
+        <h3>Homeowners</h3>
+        <p>From driveways and drainage to garden beds — we help you get the job done.</p>
+      </div>
+      <div class="who-item">
+        <img src="assets/project-landscapers.jpg" alt="Landscapers" class="who-image" />
+        <h3>Landscapers</h3>
+        <p>Bulk material supply with reliable scheduling and repeat delivery.</p>
+      </div>
+      <div class="who-item">
+        <img src="assets/project-contractors.jpg" alt="Contractors &amp; Commercial" class="who-image" />
+        <h3>Contractors &amp; Commercial</h3>
+        <p>Large loads, job‑site delivery and consistent supply for big projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="how-it-works">
+  <div class="container">
+    <h2>Simple. Fast. Reliable.</h2>
+    <div class="steps">
+      <div class="step">
+        <span>1</span>
+        <h4>Request a Quote</h4>
+        <p>Tell us about your project and the materials you need.</p>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <h4>Confirm &amp; Schedule</h4>
+        <p>We confirm material quantities and schedule your delivery.</p>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <h4>We Deliver On Time</h4>
+        <p>Your materials arrive as promised so your project stays on track.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="lead-capture" id="quote">
+  <div class="container">
+    <h2>Get Your Free Quote</h2>
+    <p>Tell us about your project and we’ll prepare a custom quote for your rock, gravel or dump‑truck delivery needs.</p>
+    <form class="quote-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <textarea name="details" placeholder="Project details and desired materials" required></textarea>
+      <button type="submit">Request Quote</button>
+    </form>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h2>Trusted by Local Customers</h2>
+    <p>“Great pricing and fast delivery — everything arrived exactly when promised.”</p>
+    <p>“Their gravel made our driveway project simple. Excellent service!”</p>
+    <p>“Reliable and easy to work with, from ordering to drop off.”</p>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h2>Proudly Serving Our Local Area</h2>
+    <p>We supply and deliver rock, gravel and landscaping materials across the region. If you’re unsure whether we deliver to your location, just ask.</p>
+    <a href="#" class="btn-link">Call to Confirm</a>
+  </div>
+</section>
+<section class="final-cta">
+  <div class="container">
+    <h3>Ready to Get Rock Delivered?</h3>
+    <div class="cta-buttons">
+      <a href="#quote" class="btn">Request a Quote</a>
+      <a href="tel:+11234567890" class="btn-link" style="color:white;">Call Now</a>
+    </div>
+  </div>
+</section>
+<footer>
+  Rocky Top Rock © 2025 &nbsp;|&nbsp; All rights reserved.
+</footer>
+  `,
+};
+const { HashRouter, Routes, Route } = ReactRouterDOM;
+function Page({ html }) {
+  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+}
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        {Object.keys(pages).map((path) => {
+          const Component = () => <Page html={pages[path]} />;
+          return <Route key={path} path={path} element={<Component />} />;
+        })}
+      </Routes>
+    </HashRouter>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
 </body>
 </html>
