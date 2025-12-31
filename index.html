@@ -10,11 +10,8 @@
 </head>
 <body>
   <div id="root"></div>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/react-router-dom@6/umd/react-router-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel">
+  <!-- Removed React and Babel script imports and replaced with a lightweight vanilla JS router -->
+  <script>
 const pages = {
   '/rock-aggregate': `
 <!-- Navigation Bar with Logo -->
@@ -848,23 +845,15 @@ const pages = {
 </footer>
   `,
 };
-const { HashRouter, Routes, Route } = ReactRouterDOM;
-function Page({ html }) {
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+// Simple hash‑based routing without React. When the hash changes or the page loads
+// we update the #root element with the corresponding HTML snippet.
+function render() {
+  const path = window.location.hash.substring(1) || '/';
+  const html = pages[path] || pages['/'];
+  document.getElementById('root').innerHTML = html;
 }
-function App() {
-  return (
-    <HashRouter>
-      <Routes>
-        {Object.keys(pages).map((path) => {
-          const Component = () => <Page html={pages[path]} />;
-          return <Route key={path} path={path} element={<Component />} />;
-        })}
-      </Routes>
-    </HashRouter>
-  );
-}
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+window.addEventListener('hashchange', render);
+window.addEventListener('DOMContentLoaded', render);
   </script>
 </body>
 </html>
