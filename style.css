@@ -447,4 +447,26 @@ footer {
   .service-item, .who-item, .step {
     flex: 1 1 100%;
   }
+
+  /*
+   * On tablets and smaller screens the navigation bar logo should shrink so it doesn't
+   * overwhelm the limited header space. Adjust the height of the logo for better
+   * balance on devices under 768px wide. Because the logo's width is auto
+   * and it uses object-fit: contain, scaling the height preserves aspect ratio.
+   */
+  .navbar .logo {
+    height: 60px;
+  }
+}
+
+/*
+ * Further reduce the logo size on very small screens (e.g. mobile phones).
+ * When the viewport is less than 480px wide, the header bar has even less
+ * vertical space, so we decrease the logo height to 50px. This ensures
+ * the navigation remains compact while keeping the logo legible.
+ */
+@media (max-width: 480px) {
+  .navbar .logo {
+    height: 50px;
+  }
 }
