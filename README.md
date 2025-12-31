@@ -21,7 +21,7 @@ The project is organized as follows:
 - `dump-truck-delivery.html` – Landing page for dump‑truck delivery service.
 - `landscaping.html` – Landing page for landscaping and property projects.
 - `style.css` – Shared styles across all pages.
-- `assets/` – Contains the Rocky Top Rock logo (`logo_small.png` for optimized use and `logo.png` as a high‑resolution source).
+- `assets/` – Contains the Rocky Top Rock logo assets. `logo.png` is the original multi‑variant logo pack, `logo_small.png` is a downscaled version of that pack, and `logo_header.png` is a cropped single horizontal logo used in the site header.
 
 ## Deployment
 
