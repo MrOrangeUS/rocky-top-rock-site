@@ -74,6 +74,9 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s ease;
+  /* Prevent the call button text from wrapping and set a base font size. */
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
 .navbar .cta-header:hover {
@@ -457,6 +460,12 @@ footer {
   .navbar .logo {
     height: 60px;
   }
+
+  /* Reduce the CTA button font size and padding on tablets and smaller screens */
+  .navbar .cta-header {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
 }
 
 /*
@@ -468,5 +477,11 @@ footer {
 @media (max-width: 480px) {
   .navbar .logo {
     height: 50px;
+  }
+
+  /* Further reduce the CTA button size on very small phones */
+  .navbar .cta-header {
+    font-size: 0.65rem;
+    padding: 4px 10px;
   }
 }
