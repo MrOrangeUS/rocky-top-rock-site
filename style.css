@@ -79,6 +79,19 @@ body {
   font-size: 1rem;
 }
 
+/* Provide spacing between the call label and number inside the call button */
+.navbar .cta-header .call-text {
+  margin-right: 4px;
+}
+
+/* On very small screens hide the "Call Now" label in the header button
+   to keep the button compact. The phone number remains visible. */
+@media (max-width: 480px) {
+  .navbar .cta-header .call-text {
+    display: none;
+  }
+}
+
 .navbar .cta-header:hover {
   background: #d95d1f;
 }
